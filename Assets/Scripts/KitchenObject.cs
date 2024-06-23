@@ -5,16 +5,32 @@ using UnityEngine;
 public class KitchenObject : MonoBehaviour
 {
 
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private IKitchenObjectParent kitchenObjectParent;
+   
+    public KitchenObjectSO GetKitchenObjectSO() {
+        return kitchenObjectSO;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetKitchenObjectParent(IKitchenObjectParent kitchenObjectParent)
     {
+        if (this.kitchenObjectParent != null)
+        {
+            this.kitchenObjectParent.ClearKitchenObject();
+        }
+
+        this.kitchenObjectParent = kitchenObjectParent;
+
         
+        kitchenObjectParent.SetKitchenObjest(this);
+
+        transform.parent = kitchenObjectParent.GetKitchenObjectFollowTransform();
+        transform.localPosition = Vector3.zero;
+    }
+
+    public IKitchenObjectParent GetKitchenObjectParent()
+    {
+        return kitchenObjectParent;
     }
 }

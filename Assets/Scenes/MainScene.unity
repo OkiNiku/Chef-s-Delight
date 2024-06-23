@@ -195,6 +195,37 @@ Transform:
   - {fileID: 793289255}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.03, z: 0}
+--- !u!1 &121050118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121050119}
+  m_Layer: 0
+  m_Name: KitchenObjectHoldPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121050119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121050118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.34, z: 0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 205766918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &127194098
 GameObject:
   m_ObjectHideFlags: 3
@@ -325,6 +356,7 @@ MonoBehaviour:
   countersLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  kitchenObjectHoldPoint: {fileID: 121050119}
 --- !u!4 &205766918
 Transform:
   m_ObjectHideFlags: 0
@@ -339,8 +371,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 732688051}
+  - {fileID: 121050119}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &233857383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7836399559031722165, guid: fcc0cfc2d265b8a4b8e013d30d9523f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 955975969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b145cd77dc8749429f8ece0802f637b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1303,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clear Counter
       objectReference: {fileID: 0}
+    - target: {fileID: 7836399559031722165, guid: fcc0cfc2d265b8a4b8e013d30d9523f8,
+        type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836399559031722165, guid: fcc0cfc2d265b8a4b8e013d30d9523f8,
+        type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 233857383}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
