@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5e81c6b9447db4db3f03b3cee72d50, type: 3}
-  m_Name: TomatoSlices
+  m_Script: {fileID: 11500000, guid: 8405eac11735dda4bb2484b55680eda9, type: 3}
+  m_Name: MeatPattyCooked-MeatPattyBurned
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6525249287187888410, guid: 3282d647f1c12ab42acd73d3deb95e65, type: 3}
-  sprite: {fileID: 21300000, guid: c9f08c3c1ae2a364aaeaa3712540b1d4, type: 3}
-  objectName: Tomato Slices
+  input: {fileID: 11400000, guid: d1667def99a302d42a215a8b3d138c57, type: 2}
+  output: {fileID: 11400000, guid: 2ca3952d99e74ce4bb6b435c900e80aa, type: 2}
+  burningTimerMax: 5
