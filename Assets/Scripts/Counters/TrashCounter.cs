@@ -8,7 +8,7 @@ public class TrashCounter : BaseCounter
     {
         if (player.HasKitchenObject())
         {
-            player.GetKitchenObject().DestroSelf();
+            player.GetKitchenObject().DestroySelf();
         }
     }
 }
