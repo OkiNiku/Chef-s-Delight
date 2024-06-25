@@ -12,7 +12,7 @@ public class PlateCompleteVisual : MonoBehaviour
         public GameObject gameObject;
     }
     [SerializeField] private PlateKitchenObject plateKitchenObject;
-    [SerializeField] private List<KitchenObjectSO_GameObject>  kitchenObjectSO_GameObjectList;
+    [SerializeField] private List<KitchenObjectSO_GameObject>  kitchenObjectSOGameObjectList;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class PlateCompleteVisual : MonoBehaviour
 
     private void PlateKitchenObject_OnIngredientAdded(object sender, PlateKitchenObject.OnIngredientAddedEventArgs e)
     {
-        foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSO_GameObjectList)
+        foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {
            if (kitchenObjectSOGameObject.kitchenObjectSO == e.kitchenObjectSO) {
                 kitchenObjectSOGameObject.gameObject.SetActive(true);
