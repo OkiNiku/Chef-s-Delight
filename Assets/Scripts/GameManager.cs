@@ -51,11 +51,7 @@ public class GameManager : MonoBehaviour
 
     private void GameInput_OnPauseAction(object sender, EventArgs e)
     {
-        if (state == State.WaitingToStart)
-        {
-            state = State.CountdownToStart;
-            OnStateChanged?.Invoke(this, new EventArgs());
-        }
+        TogglePauseGame();
     }
 
     private void Update()
